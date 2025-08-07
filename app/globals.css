@@ -120,3 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.cl-footer > div:not(.cl-footerAction){
+  display: none !important;
+}
