@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import OpenAI from "openai";
+import OpenAI, { OpenAI as OpenAIType } from "openai";
 
-export const openai = new OpenAI({
+// If you need to use the OpenAI instance, type it explicitly where used, but do not export it as a route export.
+const openai: OpenAIType = new OpenAI({
     baseURL: 'https://openrouter.ai/api/v1',
     apiKey: process.env.OPENROUTER_API_KEY,
     defaultHeaders: {
